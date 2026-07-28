@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'analytics',
     'recommendations',
     'notifications',
+    'companies',
+    'resumes',
+    'ai_engine',
+    "savedjobs",
 ]
 
 MIDDLEWARE = [
@@ -142,3 +146,9 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+AUTH_USER_MODEL = "accounts.User"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
